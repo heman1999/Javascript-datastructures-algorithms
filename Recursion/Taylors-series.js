@@ -11,5 +11,5 @@ function Taylor(x, n) {
   return _Taylor(x, n);
 }
 
-const taylor = Taylor(4, 100);
+const taylor = Taylor(4, 50);
 console.log(taylor);
