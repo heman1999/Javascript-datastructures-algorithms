@@ -17,7 +17,7 @@ var findLength = function (A, B) {
   }
   for (let i = 1; i < n + 1; i++) {
     for (let j = 1; j < m + 1; j++) {
-      if (text1[i - 1] == text2[j - 1]) {
+      if (A[i - 1] == B[j - 1]) {
         dp[i][j] = 1 + dp[i - 1][j - 1];
         max = Math.max(max, dp[i][j]);
       } else {
@@ -25,6 +25,7 @@ var findLength = function (A, B) {
       }
     }
   }
-  console.log(dp);
-  return dp[n][m];
+  return max;
 };
+
+console.log(findLength([1, 2, 3, 2, 1], [3, 2, 1, 4, 7]));
